@@ -91,6 +91,7 @@
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:scrollbarSize="25dp">
+
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
