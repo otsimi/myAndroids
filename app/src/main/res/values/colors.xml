@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="black">#FF000000</color>
+    <color name="white">#ffffff</color>
 
-
-    <color name="primary">#AA0B0B</color><!-- The color for the main text (e.g., EquiLoan) -->
-    <color name="welcome">#6E717C</color>
-    <color name="google_blue">#4285F4</color> <!-- The color for the Google login button -->
-    <color name="gray">#aaaaaa</color> <!-- The color for the separator text -->
-    <color name="link_color">#4285F4</color> <!-- The color for the "Forgot Password?" and "Sign up" links -->
-    <color name="login_red">#b71c1c</color> <!-- The color for the login button -->
-    <color name="white">#ffffff</color> <!-- The color for text on colored backgrounds -->
+    <color name="primary">#AA0B0B</color>
+    <color name="grey">#6E717C</color>
+    <color name="google_blue">#4285F4</color>
+    <color name="gray">#aaaaaa</color>
+    <color name="link_color">#4285F4</color>
+    <color name="login_red">#b71c1c</color>
     <color name="forgot_password">#6765E8</color>
 </resources>

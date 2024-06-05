@@ -14,6 +14,5 @@ class newUserRegistrationFragment : Fragment(){
             R.layout.newuser_registration, container, false
         )
     }
-    // Here "layout_login" is a name of layout file
-    // created for LoginFragment
+
 }
