@@ -12,17 +12,118 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:textColorHint="@color/welcome"
         app:hintTextAppearance="@color/welcome"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
         android:scrollbarSize="25dp"
-        app:layout_constraintTop_toBottomOf="">
+        app:layout_constraintBottom_toTopOf="@id/customerEmail"
+        android:layout_marginTop="40dp">
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:inputType="text"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/customerEmail"
+        android:hint="Enter Email Address"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColorHint="@color/welcome"
+        app:hintTextAppearance="@color/welcome"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:scrollbarSize="25dp"
+        app:layout_constraintTop_toBottomOf="@id/customerFullName"
+        android:layout_marginTop="40dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:inputType="text"
+           />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/customerPhoneNo"
+        android:hint="Enter Phone Number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColorHint="@color/welcome"
+        app:hintTextAppearance="@color/welcome"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:scrollbarSize="25dp"
+        app:layout_constraintTop_toBottomOf="@id/customerEmail"
+        android:layout_marginTop="40dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:inputType="text"/>
 
 
     </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/customerId"
+        android:hint="ID Number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColorHint="@color/welcome"
+        app:hintTextAppearance="@color/welcome"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:scrollbarSize="25dp"
+        app:layout_constraintTop_toBottomOf="@id/customerPhoneNo"
+        android:layout_marginTop="40dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:inputType="text"/>
 
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/customerGender"
+        android:hint="Gender"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColorHint="@color/welcome"
+        app:hintTextAppearance="@color/welcome"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:scrollbarSize="25dp"
+        app:layout_constraintTop_toBottomOf="@id/customerId"
+        android:layout_marginTop="40dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:inputType="text"/>
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/customerGender"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:text="@string/proceed"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
