@@ -5,17 +5,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.chaos.view.PinView
 
-class furtherDetailsFragment:  Fragment() {
-    private lateinit var pinView: PinView
+class employmentDetailsFragment: Fragment() {
     override fun onCreateView(
-
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
         return inflater.inflate(
-            R.layout.further_details, container, false
+            R.layout.employment_details, container, false
         )
     }
-
 }

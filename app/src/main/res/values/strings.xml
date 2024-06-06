@@ -12,4 +12,11 @@
     <string name="new_user_signup">New user?</string>
     <string name="signup">Sign up</string>
     <string name="proceed">Proceed</string>
+    <string name="otp">OTP VERIFICATION</string>
+    <string name="enterOtp">Enter Otp sent to your email</string>
+    <string name="verify">VERIFY</string>
+    <string name="otpFailure">Did not receive OTP? </string>
+    <string name="resendOtp">RESEND</string>
+    <string name="creditLimit">Your credit limit:</string>
+
 </resources>

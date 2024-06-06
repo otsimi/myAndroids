@@ -26,7 +26,9 @@ class signupActivity : AppCompatActivity() {
     private fun setupViewPager(viewPager: ViewPager2, tabLayout: TabLayout) {
         val adapter = ViewPagerAdapter(this)
         adapter.addFragment(newUserRegistrationFragment(), "Registration")
-//        adapter.addFragment(furtherDetailsFragment(), "Further Details")
+        adapter.addFragment(furtherDetailsFragment(), "Email Verification")
+        adapter.addFragment(employmentDetailsFragment(),"Work Details")
+        adapter.addFragment(documentUploadFragment(),"Document uploads")
         viewPager.adapter = adapter
 
         TabLayoutMediator(tabLayout, viewPager) { tab, position ->
@@ -39,10 +41,11 @@ class ViewPagerAdapter(activity: FragmentActivity) : FragmentStateAdapter(activi
     private val fragmentList: MutableList<Fragment> = mutableListOf()
     private val fragmentTitleList: MutableList<String> = mutableListOf()
 
-    fun addFragment(fragment: newUserRegistrationFragment, title: String) {
+    fun addFragment(fragment: Fragment, title: String) {
         fragmentList.add(fragment)
         fragmentTitleList.add(title)
     }
+
 
     override fun getItemCount(): Int {
         return fragmentList.size
