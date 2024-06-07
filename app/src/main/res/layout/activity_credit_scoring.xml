@@ -16,13 +16,155 @@
         android:layout_marginStart="40dp"
         android:id="@+id/back"/>
     <TextView
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="@id/main"
         app:layout_constraintEnd_toEndOf="@id/main"
         app:layout_constraintTop_toBottomOf="@id/back"
         android:text="@string/creditLimit"
         android:textAlignment="center"
-        android:textColor="@color/link_color"/>
+        android:textColor="@color/link_color"
+        android:id="@+id/creditLimitInit"
+        android:layout_marginEnd="50dp"
+        android:textSize="18sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/creditLimitInit"
+        app:layout_constraintTop_toBottomOf="@id/back"
+        android:id="@+id/limitShow"
+        android:text="Ksh 50000"
+        android:drawableRight="@drawable/question_mark"
+        android:layout_marginStart="5dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        />
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Amount"
+        android:hint="Enter Amount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/creditLimitInit"
+        android:textColorHint="@color/grey"
+        app:hintTextAppearance="@color/grey"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="50dp"
+        android:scrollbarSize="25dp"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:inputType="text"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/quickAdd"
+        app:layout_constraintTop_toBottomOf="@id/Amount"
+        android:text="Quick add:"
+        app:layout_constraintStart_toStartOf="@id/main"
+        app:layout_constraintEnd_toEndOf="@id/main"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/quickAdd"
+        app:layout_constraintTop_toBottomOf="@id/Amount"
+        android:text="Ksh 5000"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:id="@+id/firstAmount"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/secondAmount"
+       />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/firstAmount"
+        app:layout_constraintTop_toBottomOf="@id/Amount"
+        android:text="Ksh 10000"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:textStyle="bold"
+        android:id="@+id/secondAmount"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/loanTenure"
+        android:hint="Select Tenure"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/quickAdd"
+        android:textColorHint="@color/grey"
+        app:hintTextAppearance="@color/grey"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="50dp"
+        android:scrollbarSize="25dp">
+
+        <AutoCompleteTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:inputType="none"
+            android:drawableRight="@drawable/baseline_expand_circle_down_24" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/main"
+        app:layout_constraintEnd_toEndOf="@id/main"
+        app:layout_constraintTop_toBottomOf="@id/loanTenure"
+        android:text="@string/interest"
+        android:textColor="@color/link_color"
+        android:layout_marginTop="10dp"
+        android:id="@+id/applicableInterest"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/applicableInterest"
+        app:layout_constraintTop_toBottomOf="@id/loanTenure"
+        android:text="25%"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="30dp"
+        android:drawableRight="@drawable/question_mark"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/totalRepaymentAmount"
+        android:hint="Repayment Amount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/applicableInterest"
+        android:textColorHint="@color/grey"
+        app:hintTextAppearance="@color/grey"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="50dp"
+        android:scrollbarSize="25dp"
+
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:inputType="text"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
