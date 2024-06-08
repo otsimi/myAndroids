@@ -166,5 +166,90 @@
             />
 
     </com.google.android.material.textfield.TextInputLayout>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/gray"
+        android:padding="16dp"
+        app:layout_constraintStart_toStartOf="@id/main"
+        app:layout_constraintEnd_toEndOf="@id/main"
+        app:layout_constraintTop_toBottomOf="@id/totalRepaymentAmount"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Monthly Payment"
+            android:textColor="@color/gray"
+            android:textSize="14sp" />
+            <TextView
+                android:id="@+id/monthlyPayment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NIL"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+           </LinearLayout>
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/gray" />
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No of Payments"
+        android:textColor="@color/gray"
+        android:textSize="14sp" />
+    <TextView
+        android:id="@+id/numberOfPayments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NIL"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+    </LinearLayout>
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/gray" />
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Payback"
+        android:textColor="@color/gray"
+        android:textSize="14sp" />
+    <TextView
+        android:id="@+id/totalPayback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NIL"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+    </LinearLayout>
+    </LinearLayout>
+
+
+
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

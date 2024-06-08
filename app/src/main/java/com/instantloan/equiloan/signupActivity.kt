@@ -1,6 +1,8 @@
 package com.instantloan.equiloan
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import androidx.appcompat.widget.Toolbar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
@@ -15,6 +17,7 @@ class signupActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signup)
 
+
         val tabToolbar = findViewById<Toolbar>(R.id.toolbar)
         val tabViewPager = findViewById<ViewPager2>(R.id.view_pager)
         val tabTabLayout = findViewById<TabLayout>(R.id.tab_layout)
@@ -27,14 +30,18 @@ class signupActivity : AppCompatActivity() {
         val adapter = ViewPagerAdapter(this)
         adapter.addFragment(newUserRegistrationFragment(), "Registration")
         adapter.addFragment(furtherDetailsFragment(), "Email Verification")
-        adapter.addFragment(employmentDetailsFragment(),"Work Details")
-        adapter.addFragment(documentUploadFragment(),"Document uploads")
+        adapter.addFragment(employmentDetailsFragment(), "Work Details")
+        adapter.addFragment(documentUploadFragment(), "Document uploads")
         viewPager.adapter = adapter
 
         TabLayoutMediator(tabLayout, viewPager) { tab, position ->
             tab.text = adapter.getPageTitle(position)
         }.attach()
     }
+
+
+
+
 }
 
 class ViewPagerAdapter(activity: FragmentActivity) : FragmentStateAdapter(activity) {
@@ -45,7 +52,6 @@ class ViewPagerAdapter(activity: FragmentActivity) : FragmentStateAdapter(activi
         fragmentList.add(fragment)
         fragmentTitleList.add(title)
     }
-
 
     override fun getItemCount(): Int {
         return fragmentList.size
