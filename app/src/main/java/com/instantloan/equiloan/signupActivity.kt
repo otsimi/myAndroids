@@ -24,7 +24,15 @@ class signupActivity : AppCompatActivity() {
 
         setSupportActionBar(tabToolbar)
         setupViewPager(tabViewPager, tabTabLayout)
+//        if (savedInstanceState == null) {
+//            loadFragment(newUserRegistrationFragment())
+//        }
     }
+//    private fun loadFragment(fragment: Fragment) {
+//        supportFragmentManager.beginTransaction()
+//            .replace(R.id.fragment_container, fragment)
+//            .commit()
+//    }
 
     private fun setupViewPager(viewPager: ViewPager2, tabLayout: TabLayout) {
         val adapter = ViewPagerAdapter(this)
@@ -38,9 +46,6 @@ class signupActivity : AppCompatActivity() {
             tab.text = adapter.getPageTitle(position)
         }.attach()
     }
-
-
-
 
 }
 
